@@ -1,0 +1,61 @@
+// Java Program to Check if Given Integer is Odd or Even
+// by checking the LSB of the Number
+
+// Importing required classes
+import java.util.*;
+
+// Main class
+// TestEvenOddByCheckingLSB
+public class GFG3 {
+
+	// Method 1
+	// To test number is even or odd
+	public static String testOddEvenByCheckingLSB(int a)
+	{
+
+		if (a != 0) {
+			if (Integer.toBinaryString(a).endsWith("0")) {
+				return "Even";
+			}
+			else {
+				return "Odd";
+			}
+		}
+
+		// Here we will land if
+		// it does not ends with 0
+		else {
+			return "Zero";
+		}
+	}
+
+	// Method 2
+	// Main driver method
+	public static void main(String[] args)
+	{
+
+		// Iterationg over using for loop
+		for (int i = 0; i <= 10; i++) {
+
+			// Calling the function and printing
+			// corresponding number is even or odd
+			System.out.println(
+				i + " : " + testOddEvenByCheckingLSB(i));
+		}
+	}
+}
+
+
+output:-
+===========
+0 : Zero
+1 : Odd
+2 : Even
+3 : Odd
+4 : Even
+5 : Odd
+6 : Even
+7 : Odd
+8 : Even
+9 : Odd
+10 : Even
